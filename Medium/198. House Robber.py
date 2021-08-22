@@ -19,3 +19,8 @@ class Solution:
 # Used dynamic programming approach. At the "numb_last_house" i keep number of the last house, what was robed at best solution at processing dynumic programming
 # max_money[i] - its max money, that we can rob from first "i" house
 # Other we can understand from code
+
+# Time complexity: O(n)
+# Space complexity: O(n) 
+
+#We can do better. For this we can keep at max_money only last two values (because only them can 
