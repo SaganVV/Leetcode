@@ -11,13 +11,9 @@
 #         self.next = next
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        copy_head = head
-        i = 1
-        while head:
-            i+=1
-            head = head.next
-        j = 1
-        while j<(i+1)//2:
-            copy_head = copy_head.next
-            j+=1
-        return copy_head
+      #  copy_head = head
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
